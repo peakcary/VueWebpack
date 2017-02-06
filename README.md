@@ -136,5 +136,6 @@ echo>.babelrc
 完成该配置我们在命令中运行
 
 $ webpack
-打开index.html就可以看到浏览器中看到我们刚刚写的文字
+打开index.html就可以看到浏览器中看到我们刚刚写的文字  
+
 至此我们实现了最基本的利用webpack打包vue
