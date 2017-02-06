@@ -2,13 +2,13 @@
 Vue+Webpack基础
 
 
-项目的创建
-1.新建项目文件夹，并在其中建立package.json
+# # 项目的创建
+# # # 1.新建项目文件夹，并在其中建立package.json
 
 $ mkdir [project name]
 $ cd [project name]
 $ npm init
-2.在项目目录下新建index.html
+# # # 2.在项目目录下新建index.html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,8 @@ $ npm init
     <script src="dist/build.js"></script>
 </body>
 </html>
-src文件夹，并在该文件夹下建立main.js
+
+# # # src文件夹，并在该文件夹下建立main.js
 
 import Vue from 'vue'
 new Vue({
@@ -30,8 +31,8 @@ new Vue({
         message:'test success!'
     }
 });
-设置webpack
-1.安装webpack，webpack-dev-server以及相关的loaders
+# # 设置webpack
+# # # 1.安装webpack，webpack-dev-server以及相关的loaders
 # 全局安装webpack，webpack-dev-server
 $ npm install -g webpack
 $ npm install -g webpack-dev-server
@@ -77,7 +78,7 @@ module:{
         {test:/\.css$/,loaders:['style','css']}
     ]
 }
-2.配置webpack.config.js
+# # # 2.配置webpack.config.js
 在根目录下建立webpack.config.js，配置如下：
 
 var path = require('path');
