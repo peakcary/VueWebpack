@@ -37,10 +37,14 @@ new Vue({
 ##设置webpack
 ###1.安装webpack，webpack-dev-server以及相关的loaders
 全局安装webpack，webpack-dev-server
+```
 $ npm install -g webpack
 $ npm install -g webpack-dev-server
+```
 为项目安装其他依赖
+```
 $ npm i webpack-merge css-loader style-loader file-loader url-loader babel-core babel-loader babel-plugin-transform-runtime babel-preset-es2015 babel-preset-stage-0 babel-runtime vue vue-loader vue-html-loader vue-style-loader vue-hot-reload-api -D
+```
 webpack-merge：开发环境和生产环节的webpaak配置文件的配置合并<br/>
 css-loader：编译写入css<br/>
 style-loader：把编译后的css整合进html<br/>
