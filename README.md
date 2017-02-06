@@ -4,12 +4,13 @@ Vue+Webpack基础
 
 ##项目的创建
 ###1.新建项目文件夹，并在其中建立package.json
-
+```
 $ mkdir [project name]
 $ cd [project name]
 $ npm init
+```
 ###2.在项目目录下新建index.html
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@ $ npm init
     <script src="dist/build.js"></script>
 </body>
 </html>
-
+```
 ###src文件夹，并在该文件夹下建立main.js
 
 ```
@@ -59,7 +60,7 @@ url-loader
 
 这里介绍下url-loader，这个loader实际上是对file-loader的封装https://github.com/webpack/url-loader
 比如CSS文件中有时候会这么写：
-
+```
 .demo{
     background-image: url('a.png');
 }
@@ -68,9 +69,10 @@ module:{
         {test:/\.(png|jpg)$/,loader:'url-loader?limit=8192'}
     ]
 }
+```
 经过以上配置，当a.png小于8K就会自动将图片转换成base64编码，如果不小于，则不会转换。
 这里顺便提一句，在module配置的时候，loader的写法：
-
+```
 module:{
     loaders:[
         {test:/\.jade$/,loader:'jade'}
@@ -80,9 +82,10 @@ module:{
         {test:/\.css$/,loaders:['style','css']}
     ]
 }
+```
 ###2.配置webpack.config.js
 在根目录下建立webpack.config.js，配置如下：
-
+```
 var path = require('path');
 module.exports = {
   entry: './src/main.js',
@@ -114,16 +117,18 @@ module.exports = {
      plugins: ['transform-runtime']
   }
 }
+```
 特别说明
 如果要在.babelrc下配置babel，则需要在根目录下新建该文件，windows环境下，不能新建该txt文件然后改后缀，需要通过dos命令建立：
 
 echo>.babelrc
 通过该命令就可以建立babelde配置文件，用编辑器打开，修改里面的内容为：
-
+```
 {
   "presets": ["es2015", "stage-0"],
   "plugins": ["transform-runtime"]
 }
+```
 完成该配置我们在命令中运行
 
 $ webpack
