@@ -2,7 +2,7 @@
 Vue+Webpack基础
 
 
-# # 项目的创建
+##项目的创建
 # # # 1.新建项目文件夹，并在其中建立package.json
 
 $ mkdir [project name]
