@@ -18,7 +18,9 @@ $ npm init
     <title>Vue example</title>
 </head>
 <body>
-    <div>{{message}}</div>
+    <div id="app">
+      {{ message }}
+    </div>
     <script src="dist/build.js"></script>
 </body>
 </html>
@@ -26,6 +28,8 @@ $ npm init
 ###src文件夹，并在该文件夹下建立main.js
 
 ```
+/*
+（不能这么用）
 import Vue from 'vue'
 new Vue({
     el:'body',
@@ -33,6 +37,15 @@ new Vue({
         message:'test success!'
     }
 });
+*/
+
+import Vue from 'vue/dist/vue.js'
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
 ```
 ##设置webpack
 ###1.安装webpack，webpack-dev-server以及相关的loaders
@@ -137,5 +150,8 @@ echo>.babelrc
 
 $ webpack
 打开index.html就可以看到浏览器中看到我们刚刚写的文字  
-
 至此我们实现了最基本的利用webpack打包vue
+
+
+#遇到点问题
+npm install vue --save的时候不能成功，原来package.json里面的name写成vue和安装的vue同名了
