@@ -24,6 +24,7 @@ $ npm init
 
 ###src文件夹，并在该文件夹下建立main.js
 
+```
 import Vue from 'vue'
 new Vue({
     el:'body',
@@ -31,6 +32,7 @@ new Vue({
         message:'test success!'
     }
 });
+```
 ##设置webpack
 ###1.安装webpack，webpack-dev-server以及相关的loaders
 全局安装webpack，webpack-dev-server
