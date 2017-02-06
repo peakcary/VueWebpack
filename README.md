@@ -3,12 +3,12 @@ Vue+Webpack基础
 
 
 ##项目的创建
-# # # 1.新建项目文件夹，并在其中建立package.json
+###1.新建项目文件夹，并在其中建立package.json
 
 $ mkdir [project name]
 $ cd [project name]
 $ npm init
-# # # 2.在项目目录下新建index.html
+###2.在项目目录下新建index.html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ $ npm init
 </body>
 </html>
 
-# # # src文件夹，并在该文件夹下建立main.js
+###src文件夹，并在该文件夹下建立main.js
 
 import Vue from 'vue'
 new Vue({
@@ -31,12 +31,12 @@ new Vue({
         message:'test success!'
     }
 });
-# # 设置webpack
-# # # 1.安装webpack，webpack-dev-server以及相关的loaders
-# 全局安装webpack，webpack-dev-server
+##设置webpack
+###1.安装webpack，webpack-dev-server以及相关的loaders
+全局安装webpack，webpack-dev-server
 $ npm install -g webpack
 $ npm install -g webpack-dev-server
-# 为项目安装其他依赖
+为项目安装其他依赖
 $ npm i webpack-merge css-loader style-loader file-loader url-loader babel-core babel-loader babel-plugin-transform-runtime babel-preset-es2015 babel-preset-stage-0 babel-runtime vue vue-loader vue-html-loader vue-style-loader vue-hot-reload-api -D
 webpack-merge：开发环境和生产环节的webpaak配置文件的配置合并<br/>
 css-loader：编译写入css<br/>
@@ -78,7 +78,7 @@ module:{
         {test:/\.css$/,loaders:['style','css']}
     ]
 }
-# # # 2.配置webpack.config.js
+###2.配置webpack.config.js
 在根目录下建立webpack.config.js，配置如下：
 
 var path = require('path');
